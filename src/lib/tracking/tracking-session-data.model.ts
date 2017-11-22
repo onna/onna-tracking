@@ -1,4 +1,4 @@
-export class SessionData {
+export class TrackingSessionData {
 
     width: number;
     height: number;

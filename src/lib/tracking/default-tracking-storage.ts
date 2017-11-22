@@ -1,10 +1,10 @@
 import { TrackingStorage } from './tracking-storage';
 import { TrackingData } from './tracking-data.model';
-import {SessionData} from './session-data.model';
+import { TrackingSessionData } from './tracking-session-data.model';
 
 export class DefaultTrackingStorage implements TrackingStorage {
 
-    sessionData: SessionData;
+    sessionData: TrackingSessionData;
     history: TrackingData[];
 
     constructor() {
@@ -16,7 +16,7 @@ export class DefaultTrackingStorage implements TrackingStorage {
         this.history.push(data);
     }
 
-    saveSessionData(data: SessionData) {
+    saveSessionData(data: TrackingSessionData) {
         console.log(data);
         this.sessionData = data;
     }

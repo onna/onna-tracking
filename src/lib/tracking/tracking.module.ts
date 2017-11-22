@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { TrackMeDirective } from './track-me.directive';
-import { TrackMeService } from './track-me.service';
 import { DefaultTrackingStorage } from './default-tracking-storage';
+import { TrackItDirective } from './track-it.directive';
+import { TrackItService } from './track-it.service';
 
 const PROVIDERS = [
-    TrackMeService,
+    TrackItService,
     {
         provide: 'TrackingStorage',
         useClass: DefaultTrackingStorage
@@ -19,18 +19,18 @@ const PROVIDERS = [
         RouterModule.forRoot([])
     ],
     declarations: [
-        TrackMeDirective
+        TrackItDirective
     ],
     exports: [
-        TrackMeDirective
+        TrackItDirective
     ],
     providers: PROVIDERS
 })
-export class TrackMeModule {
+export class TrackingModule {
 
     static storage(storage: any) {
         return {
-            ngModule: TrackMeModule,
+            ngModule: TrackingModule,
             providers: [
                 {
                     provide: 'TrackingStorage',

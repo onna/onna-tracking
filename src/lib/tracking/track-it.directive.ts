@@ -1,21 +1,20 @@
-import {Directive, ElementRef, Input, OnInit, Renderer2} from '@angular/core';
-import {TrackingData} from './tracking-data.model';
-import {TrackMeService} from './track-me.service';
+import { Directive, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
+import { TrackingData } from './tracking-data.model';
+import { TrackItService } from './track-it.service';
 
 @Directive({
-    selector: '[trackMe]'
+    selector: '[trackIt]'
 })
-export class TrackMeDirective implements OnInit {
+export class TrackItDirective implements OnInit {
 
-    @Input() trackMe: string;
+    @Input() trackIt: string;
 
     constructor(private elementRef: ElementRef,
                 private renderer: Renderer2,
-                private service: TrackMeService) {
+                private service: TrackItService) {
     }
 
     ngOnInit() {
-        console.log('Tracking: ' + this.trackMe);
         this.renderer.listen(this.elementRef.nativeElement, 'click', this.trackClickEvent());
     }
 
@@ -24,7 +23,7 @@ export class TrackMeDirective implements OnInit {
 
         return ($event) => {
             const data = new TrackingData({
-                element: self.trackMe,
+                element: self.trackIt,
                 route: self.service.getCurrentRoute(),
                 x: <number> $event['x'],
                 y: <number> $event['y'],
