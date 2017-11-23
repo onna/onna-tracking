@@ -44,7 +44,7 @@
         "typescript": "^2.3.4"
     },
     "peerDependencies": {
-        "@angular/core": ">= 4.4.4 < 5",
-        "@angular/router": ">= 4.4.4 < 5"
+        "@angular/core": ">= 4.4.4",
+        "@angular/router": ">= 4.4.4"
     }
 }
