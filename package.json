@@ -1,6 +1,6 @@
 {
-    "name": "@onna/tracking",
-    "version": "0.0.0",
+    "name": "onna-tracking",
+    "version": "0.0.1",
     "license": "MIT",
     "scripts": {
         "ng": "ng",
@@ -12,7 +12,6 @@
     },
     "main": "./dist/index.js",
     "types": "dist/index.d.ts",
-    "private": true,
     "dependencies": {
         "core-js": "^2.4.1",
         "zone.js": "^0.8.14"
