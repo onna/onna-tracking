@@ -1,0 +1,55 @@
+/license-banner.txt
+/test
+/karma.conf.js
+/karma-test-shim.js
+
+/rollup.config.js
+/rollup-min.config.js
+
+/systemjs.config.js
+
+/tsconfig.json
+/tsconfig-build.json
+
+
+*.ngFactory.ts
+/node_modules
+/src
+/lib
+/tools
+/coverage
+/appExample
+/Dockerfile
+/Jenkinsfile
+/junit
+/xvfb-chromium
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+*.launch
+.settings/
+.editorconfig
+.vscode
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+.travis.yml
+.npmignore
+*.tgz
+
+# e2e
+/e2e
+/e2e/*.js
+/e2e/*.map
+
+#System Files
+.DS_Store
+Thumbs.db
