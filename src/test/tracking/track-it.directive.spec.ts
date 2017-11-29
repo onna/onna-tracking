@@ -2,6 +2,7 @@ import {APP_BASE_HREF} from '@angular/common';
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {Component, DebugElement, Injectable} from '@angular/core';
 import {By, BrowserModule} from '@angular/platform-browser';
+import {RouterTestingModule} from '@angular/router/testing';
 import {TrackItService} from '../../lib/tracking/track-it.service';
 import {TrackingModule} from '../../lib/tracking/tracking.module';
 import {TrackingStorage} from '../../lib/tracking/tracking-storage';
@@ -44,6 +45,7 @@ describe('Directive: TrackIt', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [
+                RouterTestingModule,
                 BrowserModule,
                 TrackingModule.storage(MyTrackingStorage)
             ],
