@@ -15,8 +15,7 @@ const PROVIDERS = [
 
 @NgModule({
     imports: [
-        CommonModule,
-        RouterModule.forRoot([])
+        CommonModule
     ],
     declarations: [
         TrackItDirective

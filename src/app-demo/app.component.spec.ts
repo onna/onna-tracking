@@ -12,6 +12,7 @@ import {TrackingSessionData} from "../lib/tracking/tracking-session-data.model";
 import {TrackingData} from "../lib/tracking/tracking-data.model";
 import {BrowserModule} from "@angular/platform-browser";
 import {APP_BASE_HREF} from "@angular/common";
+import {RouterTestingModule} from '@angular/router/testing';
 
 @Injectable()
 class MyTrackingStorage implements TrackingStorage {
@@ -34,7 +35,8 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
         imports: [
             BrowserModule,
-          TrackingModule.storage(MyTrackingStorage)
+            RouterTestingModule,
+            TrackingModule.storage(MyTrackingStorage)
         ],
       declarations: [
           AppComponent
