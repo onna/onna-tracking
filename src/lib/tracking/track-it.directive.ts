@@ -9,13 +9,19 @@ export class TrackItDirective implements OnInit {
 
     @Input() trackIt: string;
 
-    constructor(private elementRef: ElementRef,
-                private renderer: Renderer2,
-                private service: TrackItService) {
+    constructor(
+        private elementRef: ElementRef,
+        private renderer: Renderer2,
+        private service: TrackItService,
+    ) {
     }
 
     ngOnInit() {
-        this.renderer.listen(this.elementRef.nativeElement, 'click', this.trackClickEvent());
+        if (typeof this.elementRef.nativeElement.submit === 'function') {
+            this.renderer.listen(this.elementRef.nativeElement, 'submit', this.trackClickEvent());
+        } else {
+            this.renderer.listen(this.elementRef.nativeElement, 'click', this.trackClickEvent());
+        }
     }
 
     private trackClickEvent() {

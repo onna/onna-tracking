@@ -1,6 +1,6 @@
 {
     "name": "onna-tracking",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "license": "MIT",
     "repository": "https://github.com/onna/onna-tracking",
     "scripts": {
@@ -23,6 +23,7 @@
         "@angular/compiler": "4.4.4",
         "@angular/compiler-cli": "4.4.4",
         "@angular/core": "4.4.4",
+        "@angular/forms": "4.4.4",
         "@angular/platform-browser": "4.4.4",
         "@angular/platform-browser-dynamic": "4.4.4",
         "@angular/router": "4.4.4",
