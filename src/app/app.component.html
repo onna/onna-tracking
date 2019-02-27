@@ -1,0 +1,17 @@
+<div style="text-align: center">
+  <div class="button-events-test">
+      <h3>Button click tracking</h3>
+      <div style="border: 1px solid #2a2a2a; padding: 20px; display: inline-block;">
+          <button class="button1" trackIt="my-test-button-1">Test button 1</button>
+          <button trackIt="my-test-button-2">Test button 2</button>
+          <button trackIt="my-test-button-3">Test button 3</button>
+      </div>
+  </div>
+
+  <div style="border: 1px solid #2a2a2a; padding: 20px; margin: 20px;">
+      <form (submit)="onSearch()" #searchForm="ngForm" trackIt="search-bar">
+          <input type="text" id="search-bar-term" placeholder="Find what you're looking for…"
+                 autocomplete="off" [(ngModel)]="term" name="term" #search>
+      </form>
+  </div>
+</div>
